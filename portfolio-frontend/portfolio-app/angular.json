@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist",
             "baseHref": "/portfolio/",
+            "deployUrl": "/portfolio/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
