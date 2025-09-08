@@ -27,9 +27,9 @@ interface TechnicalKnowledge {
   styleUrl: './home.css'
 })
 export class HomeComponent {
-  name = 'Fabrizio Ludueña';
+  name = 'Fabrizio Luduena';
   title = 'Desarrollador Full Stack enfocado al desarrollo Back End';
-  description = 'Apasionado por la tecnología y el desarrollo de software. Especializado en crear soluciones innovadoras y eficientes.';
+  description = 'Apasionado por la tecnologia y el desarrollo de software. Especializado en crear soluciones innovadoras y eficientes.';
   
   selectedSkillIndex = 0; // Índice de la habilidad seleccionada
   
