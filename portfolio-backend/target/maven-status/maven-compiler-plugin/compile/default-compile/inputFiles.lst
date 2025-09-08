@@ -1,0 +1,9 @@
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/dto/ProjectResponseDTO.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/config/CorsConfig.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/PortfolioBackendApplication.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/service/ProjectService.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/controller/ProjectController.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/dto/ProjectCreateDTO.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/repository/ProjectRepository.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/service/impl/ProjectServiceImpl.java
+/home/fabri/Proyectos/Portfolio/portfolio-backend/src/main/java/com/portfolio/backend/entity/Project.java

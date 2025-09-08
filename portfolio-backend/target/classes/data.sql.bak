@@ -1,0 +1,15 @@
+-- ========================================
+-- DATOS INICIALES PARA PRUEBAS
+-- ========================================
+-- Script SQL para insertar algunos proyectos de ejemplo
+-- Se ejecuta automáticamente al iniciar la aplicación
+
+INSERT INTO projects (title, description, image_url, repo_url, demo_url, created_at, updated_at) VALUES 
+('Mi Portfolio', 'Portfolio personal desarrollado con Angular y Spring Boot', 'https://example.com/portfolio.jpg', 'https://github.com/usuario/portfolio', 'https://miportfolio.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('E-commerce App', 'Aplicación de comercio electrónico con carrito de compras', 'https://example.com/ecommerce.jpg', 'https://github.com/usuario/ecommerce', 'https://mitienda.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('Blog Personal', 'Blog desarrollado con tecnologías modernas', 'https://example.com/blog.jpg', 'https://github.com/usuario/blog', 'https://miblog.com', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+
+INSERT INTO project_tech_stack (project_id, technology) VALUES 
+(1, 'Angular'), (1, 'TypeScript'), (1, 'Spring Boot'), (1, 'Java'),
+(2, 'React'), (2, 'Node.js'), (2, 'Express'), (2, 'MongoDB'),
+(3, 'Vue.js'), (3, 'Nuxt.js'), (3, 'PostgreSQL'), (3, 'Docker');

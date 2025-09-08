@@ -1,0 +1,15 @@
+<div class="app">
+  <header class="header">
+    <nav class="navbar">
+      <a routerLink="/" class="logo">Mi Portfolio</a>
+      <div class="nav-links">
+        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        <a routerLink="/projects" class="nav-link" routerLinkActive="active">Proyectos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

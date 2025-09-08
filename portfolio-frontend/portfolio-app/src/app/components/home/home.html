@@ -1,0 +1,100 @@
+<div class="home-container">
+  <div class="hero-section">
+    <div class="profile-image">
+      <img src="assets/foto.jpg" alt="Fabrizio Ludueña - Desarrollador Full Stack" class="profile-img">
+    </div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">¡Hola! Soy <span class="highlight">{{ name }}</span></h1>
+      <h2 class="hero-subtitle">{{ title }}</h2>
+      <p class="hero-description">{{ description }}</p>
+      
+      <div class="cta-buttons">
+        <a routerLink="/projects" class="btn btn-primary">
+          Ver mis Proyectos
+        </a>
+        <button (click)="downloadCV()" class="btn btn-cv">
+          <img src="/assets/skills/curriculum.svg" alt="CV icon" class="cv-icon">
+          Descargar CV
+        </button>
+        <a href="#contact" class="btn btn-secondary">
+          Contactar
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <h3>Tecnologías</h3>
+    <div class="skills-interactive">
+      <!-- Descripción a la izquierda -->
+      <div class="skill-description-panel">
+        <h4 class="selected-skill-title">{{ selectedSkill.name }}</h4>
+        <p class="selected-skill-description">{{ selectedSkill.description }}</p>
+      </div>
+      
+      <!-- Iconos a la derecha -->
+      <div class="skills-icons-panel">
+        <div 
+          *ngFor="let skill of skills; let i = index" 
+          class="skill-icon-item"
+          [class.active]="selectedSkillIndex === i"
+          (click)="selectSkill(i)">
+          <img 
+            *ngIf="skill.icon" 
+            [src]="skill.icon" 
+            [alt]="skill.name + ' icon'"
+            class="skill-icon"
+            (error)="onImageError($event)">
+          <span class="skill-tooltip">{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="technical-knowledge-section">
+    <h3>Conocimientos Técnicos</h3>
+    <div class="knowledge-grid">
+      <div 
+        *ngFor="let knowledge of technicalKnowledge" 
+        class="knowledge-card">
+        <div class="knowledge-category">{{ knowledge.category }}</div>
+        <h4 class="knowledge-title">{{ knowledge.name }}</h4>
+        <p class="knowledge-description">{{ knowledge.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="about-content">
+      <h3>Sobre mí</h3>
+      <p>
+        Soy un desarrollador apasionado con experiencia en el desarrollo de aplicaciones web modernas. 
+        Me especializo en crear soluciones tecnológicas que resuelvan problemas reales y aporten valor a los usuarios.
+      </p>
+      <p>
+        Mi enfoque se centra en escribir código limpio, mantenible y escalable, utilizando las mejores prácticas 
+        de desarrollo y las tecnologías más actuales del mercado.
+      </p>
+    </div>
+  </div>
+
+  <div class="contact-section" id="contact">
+    <h3>¿Hablamos?</h3>
+    <p>Estoy abierto a nuevas oportunidades laborales donde pueda aportar mis habilidades en desarrollo y seguir creciendo profesionalmente. Si mi perfil resulta de interés, no dudes en contactarme.</p>
+    <div class="contact-links">
+      <a 
+        *ngFor="let contact of contacts" 
+        [href]="contact.url" 
+        [target]="contact.name !== 'Gmail' ? '_blank' : '_self'"
+        class="contact-link">
+        <img 
+          [src]="contact.icon" 
+          [alt]="contact.name + ' icon'"
+          class="contact-icon"
+          (error)="onImageError($event)">
+        <span class="contact-name">{{ contact.name }}</span>
+      </a>
+    </div>
+  </div>
+</div>
