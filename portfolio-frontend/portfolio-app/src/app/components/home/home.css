@@ -65,48 +65,31 @@
 
 .hero-title {
   font-size: 3.5rem;
-  color: var(--white-text);
+  color: var(--white-text) !important;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
 }
 
 .highlight {
-  color: var(--orange-primary); /* Fallback color */
-  background: linear-gradient(45deg, var(--orange-primary), var(--blue-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--orange-primary) !important;
   font-weight: 900;
-}
-
-/* Fallback for browsers that don't support background-clip: text */
-@supports not (-webkit-background-clip: text) {
-  .highlight {
-    background: none;
-    color: var(--orange-primary);
-    -webkit-text-fill-color: initial;
-  }
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
 }
 
 .hero-subtitle {
   font-size: 1.8rem;
-  color: var(--blue-secondary); /* Fallback color */
+  color: var(--blue-secondary) !important;
   margin-bottom: 2rem;
   font-weight: 500;
-  background: linear-gradient(45deg, var(--orange-secondary), var(--blue-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Fallback for browsers that don't support background-clip: text */
-@supports not (-webkit-background-clip: text) {
-  .hero-subtitle {
-    background: none;
-    color: var(--blue-secondary);
-    -webkit-text-fill-color: initial;
-  }
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
 }
 
 .hero-description {
