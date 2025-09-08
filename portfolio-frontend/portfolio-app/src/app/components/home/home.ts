@@ -36,47 +36,47 @@ export class HomeComponent {
   skills: Skill[] = [
     { 
       name: 'Angular', 
-      icon: '/assets/skills/angular.svg',
+      icon: 'assets/skills/angular.svg',
       description: 'Desarrollo aplicaciones web modernas y SPA (Single Page Applications) con componentes reutilizables, routing avanzado y gestión de estado.'
     },
     { 
       name: 'TypeScript', 
-      icon: '/assets/skills/typescript.svg',
+      icon: 'assets/skills/typescript.svg',
       description: 'Escribo código JavaScript tipado y escalable, mejorando la mantenibilidad y detectando errores en tiempo de desarrollo.'
     },
     { 
       name: 'Java', 
-      icon: '/assets/skills/java.svg',
+      icon: 'assets/skills/java.svg',
       description: 'Desarrollo backend robusto con programación orientada a objetos, APIs REST y aplicaciones empresariales escalables.'
     },
     { 
       name: 'Spring Boot', 
-      icon: '/assets/skills/spring-boot.svg',
+      icon: 'assets/skills/spring-boot.svg',
       description: 'Creo microservicios y APIs REST eficientes con inyección de dependencias, seguridad integrada y configuración automática.'
     },
     { 
       name: 'JUnit 5', 
-      icon: '/assets/skills/Junit.svg',
+      icon: 'assets/skills/Junit.svg',
       description: 'Implemento testing unitario y de integración para garantizar la calidad del código y facilitar el mantenimiento.'
     },
     { 
       name: 'Git', 
-      icon: '/assets/skills/git.svg',
+      icon: 'assets/skills/git.svg',
       description: 'Gestiono el control de versiones con flujos de trabajo colaborativos, branching strategies y resolución de conflictos.'
     },
     { 
       name: 'JavaScript', 
-      icon: '/assets/skills/javascript.svg',
+      icon: 'assets/skills/javascript.svg',
       description: 'Desarrollo funcionalidades interactivas del frontend, manipulación del DOM y programación asíncrona con ES6+.'
     },
     { 
       name: 'Database', 
-      icon: '/assets/skills/database.svg',
+      icon: 'assets/skills/database.svg',
       description: 'Diseño y optimizo bases de datos relacionales y NoSQL (SQL, MongoDB, Redis), escribo consultas complejas y gestiono migraciones de datos, asegurando rendimiento, escalabilidad y consistencia.'
     },
     { 
       name: 'GitHub', 
-      icon: '/assets/skills/github-logo.svg',
+      icon: 'assets/skills/github-logo.svg',
       description: 'Colaboro en proyectos usando repositorios remotos, pull requests, code reviews y automatización con GitHub Actions.'
     }
   ];
@@ -84,17 +84,17 @@ export class HomeComponent {
   contacts: Contact[] = [
     { 
       name: 'Gmail', 
-      icon: '/assets/skills/gmail.svg', 
+      icon: 'assets/skills/gmail.svg', 
       url: 'mailto:luduenafabrizio26@gmail.com' 
     },
     { 
       name: 'LinkedIn', 
-      icon: '/assets/skills/linkedin.svg', 
+      icon: 'assets/skills/linkedin.svg', 
       url: 'https://www.linkedin.com/in/fabrizio-leonel-ludueña-777712366' 
     },
     { 
       name: 'GitHub', 
-      icon: '/assets/skills/github-logo.svg', 
+      icon: 'assets/skills/github-logo.svg', 
       url: 'https://github.com/FabrizioLeonelLuduena' 
     }
   ];
@@ -160,7 +160,7 @@ export class HomeComponent {
   // Método para descargar el CV
   downloadCV() {
     const link = document.createElement('a');
-    link.href = '/assets/documents/CV FABRIZIO LEONEL LUDUEÑA.pdf';
+    link.href = 'assets/documents/CV FABRIZIO LEONEL LUDUEÑA.pdf';
     link.download = 'CV_Fabrizio_Ludueña.pdf';
     link.click();
   }
