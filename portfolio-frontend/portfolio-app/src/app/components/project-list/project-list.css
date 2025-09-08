@@ -34,14 +34,13 @@
 }
 
 .header-section h2 {
-  color: var(--white-text);
+  color: var(--orange-primary) !important;
   margin: 0;
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(45deg, var(--orange-primary), var(--blue-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
 }
 
 .loading,
