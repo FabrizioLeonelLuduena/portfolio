@@ -99,6 +99,64 @@ export class HomeComponent {
     }
   ];
 
+  // Método para manejar clic en Gmail
+  handleGmailClick(event: Event) {
+    event.preventDefault();
+    
+    const email = 'luduenafabrizio26@gmail.com';
+    const subject = 'Consulta desde tu Portfolio';
+    const body = 'Hola Fabrizio,\n\nMe contacto contigo desde tu portfolio web...\n\nSaludos!';
+    
+    // Intentar abrir Gmail web primero
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Abrir en nueva pestaña
+    const newWindow = window.open(gmailUrl, '_blank');
+    
+    // Si falló (popup bloqueado), mostrar alternativas
+    if (!newWindow) {
+      const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      // Intentar mailto
+      window.location.href = mailtoUrl;
+      
+      // Mostrar opción de copiar email como último recurso
+      setTimeout(() => {
+        if (confirm('¿No se abrió tu cliente de email? ¿Quieres copiar mi dirección de email al portapapeles?')) {
+          this.copyEmailToClipboard(email);
+        }
+      }, 1000);
+    }
+  }
+  
+  // Método para copiar email al portapapeles
+  copyEmailToClipboard(email: string) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        alert(`Email copiado al portapapeles: ${email}`);
+      }).catch(() => {
+        this.fallbackCopyEmail(email);
+      });
+    } else {
+      this.fallbackCopyEmail(email);
+    }
+  }
+  
+  // Fallback para navegadores que no soportan clipboard API
+  fallbackCopyEmail(email: string) {
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      alert(`Email copiado al portapapeles: ${email}`);
+    } catch (err) {
+      alert(`Mi email es: ${email}`);
+    }
+    document.body.removeChild(textArea);
+  }
+
   technicalKnowledge: TechnicalKnowledge[] = [
     {
       name: 'Patrones de Diseño',

@@ -85,9 +85,11 @@
     <div class="contact-links">
       <a 
         *ngFor="let contact of contacts" 
-        [href]="contact.url" 
-        [target]="contact.name !== 'Gmail' ? '_blank' : '_self'"
-        class="contact-link">
+        [href]="contact.name !== 'Gmail' ? contact.url : null"
+        [target]="contact.name !== 'Gmail' ? '_blank' : null"
+        (click)="contact.name === 'Gmail' ? handleGmailClick($event) : null"
+        class="contact-link"
+        [style.cursor]="'pointer'">
         <img 
           [src]="contact.icon" 
           [alt]="contact.name + ' icon'"
