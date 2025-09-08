@@ -1,9 +1,6 @@
 <div class="project-list">
   <div class="header-section">
     <h2>Mis Proyectos</h2>
-    <a routerLink="/projects/new" class="btn btn-primary">
-      ➕ Nuevo Proyecto
-    </a>
   </div>
   
   <div *ngIf="loading" class="loading">
@@ -11,10 +8,7 @@
   </div>
 
   <div *ngIf="!loading && projects.length === 0" class="no-projects">
-    <p>No hay proyectos disponibles.</p>
-    <a routerLink="/projects/new" class="btn btn-primary">
-      Crear mi primer proyecto
-    </a>
+    <p>No hay proyectos disponibles por el momento.</p>
   </div>
 
   <div class="projects-grid" *ngIf="!loading && projects.length > 0">
@@ -38,12 +32,6 @@
           <a [href]="project.demoUrl" target="_blank" class="btn btn-primary">
             🚀 Demo
           </a>
-          <a [routerLink]="['/projects/edit', project.id]" class="btn btn-info">
-            ✏️ Editar
-          </a>
-          <button (click)="deleteProject(project.id)" class="btn btn-danger">
-            🗑️ Eliminar
-          </button>
         </div>
       </div>
     </div>

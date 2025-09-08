@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { Project } from '../../interfaces/project';
 import { ProjectService } from '../../services/project';
 
 @Component({
   selector: 'app-project-list',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './project-list.html',
   styleUrls: ['./project-list.css']
 })
@@ -33,18 +32,5 @@ export class ProjectListComponent implements OnInit {
         this.loading = false;
       }
     });
-  }
-
-  deleteProject(id: number) {
-    if (confirm('¿Estás seguro de que quieres eliminar este proyecto?')) {
-      this.projectService.deleteProject(id).subscribe({
-        next: () => {
-          this.loadProjects();
-        },
-        error: (error) => {
-          console.error('Error deleting project:', error);
-        }
-      });
-    }
   }
 }
