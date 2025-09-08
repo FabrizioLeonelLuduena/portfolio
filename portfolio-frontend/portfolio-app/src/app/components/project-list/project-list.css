@@ -43,6 +43,13 @@
   z-index: 10;
 }
 
+.projects-subtitle {
+  color: var(--gray-text);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
 .loading,
 .no-projects {
   text-align: center;
@@ -104,12 +111,32 @@
   border-color: var(--orange-primary);
 }
 
+.project-year {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: linear-gradient(45deg, var(--orange-primary), var(--orange-light));
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.3);
+  z-index: 10;
+}
+
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  background: var(--tertiary-black);
+}
+
 .project-image {
   width: 100%;
-  height: 220px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
-  background: var(--tertiary-black);
 }
 
 .project-card:hover .project-image {

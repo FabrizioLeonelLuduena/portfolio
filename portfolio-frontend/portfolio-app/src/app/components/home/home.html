@@ -35,19 +35,21 @@
       
       <!-- Iconos a la derecha -->
       <div class="skills-icons-panel">
-        <div 
-          *ngFor="let skill of skills; let i = index" 
-          class="skill-icon-item"
-          [class.active]="selectedSkillIndex === i"
-          (click)="selectSkill(i)">
-          <img 
-            *ngIf="skill.icon" 
-            [src]="skill.icon" 
-            [alt]="skill.name + ' icon'"
-            class="skill-icon"
-            (error)="onImageError($event)">
-          <span class="skill-tooltip">{{ skill.name }}</span>
-        </div>
+        @for (skill of skills; track $index) {
+          <div 
+            class="skill-icon-item"
+            [class.active]="selectedSkillIndex === $index"
+            (click)="selectSkill($index)">
+            @if (skill.icon) {
+              <img 
+                [src]="skill.icon" 
+                [alt]="skill.name + ' icon'"
+                class="skill-icon"
+                (error)="onImageError($event)">
+            }
+            <span class="skill-tooltip">{{ skill.name }}</span>
+          </div>
+        }
       </div>
     </div>
   </div>
@@ -55,13 +57,13 @@
   <div class="technical-knowledge-section">
     <h3>Conocimientos Técnicos</h3>
     <div class="knowledge-grid">
-      <div 
-        *ngFor="let knowledge of technicalKnowledge" 
-        class="knowledge-card">
-        <div class="knowledge-category">{{ knowledge.category }}</div>
-        <h4 class="knowledge-title">{{ knowledge.name }}</h4>
-        <p class="knowledge-description">{{ knowledge.description }}</p>
-      </div>
+      @for (knowledge of technicalKnowledge; track knowledge.name) {
+        <div class="knowledge-card">
+          <div class="knowledge-category">{{ knowledge.category }}</div>
+          <h4 class="knowledge-title">{{ knowledge.name }}</h4>
+          <p class="knowledge-description">{{ knowledge.description }}</p>
+        </div>
+      }
     </div>
   </div>
 
@@ -83,20 +85,21 @@
     <h3>¿Hablamos?</h3>
     <p>Estoy abierto a nuevas oportunidades laborales donde pueda aportar mis habilidades en desarrollo y seguir creciendo profesionalmente. Si mi perfil resulta de interés, no dudes en contactarme.</p>
     <div class="contact-links">
-      <a 
-        *ngFor="let contact of contacts" 
-        [href]="contact.name !== 'Gmail' ? contact.url : null"
-        [target]="contact.name !== 'Gmail' ? '_blank' : null"
-        (click)="contact.name === 'Gmail' ? handleGmailClick($event) : null"
-        class="contact-link"
-        [style.cursor]="'pointer'">
-        <img 
-          [src]="contact.icon" 
-          [alt]="contact.name + ' icon'"
-          class="contact-icon"
-          (error)="onImageError($event)">
-        <span class="contact-name">{{ contact.name }}</span>
-      </a>
+      @for (contact of contacts; track contact.name) {
+        <a 
+          [href]="contact.name !== 'Gmail' ? contact.url : null"
+          [target]="contact.name !== 'Gmail' ? '_blank' : null"
+          (click)="contact.name === 'Gmail' ? handleGmailClick($event) : null"
+          class="contact-link"
+          [style.cursor]="'pointer'">
+          <img 
+            [src]="contact.icon" 
+            [alt]="contact.name + ' icon'"
+            class="contact-icon"
+            (error)="onImageError($event)">
+          <span class="contact-name">{{ contact.name }}</span>
+        </a>
+      }
     </div>
   </div>
 </div>

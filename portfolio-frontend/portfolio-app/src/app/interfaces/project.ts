@@ -6,8 +6,7 @@ export interface Project {
   repoUrl: string;
   demoUrl: string;
   techStack: string[];
-  createdAt: string;
-  updatedAt: string;
+  year?: string; // Año del proyecto (opcional)
 }
 
 export interface ProjectCreateDTO {
