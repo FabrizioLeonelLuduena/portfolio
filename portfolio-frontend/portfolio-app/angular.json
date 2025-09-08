@@ -14,8 +14,6 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist",
-            "baseHref": "/portfolio/",
-            "deployUrl": "/portfolio/",
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
@@ -24,10 +22,14 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "ssr": false,
+            "prerender": false
           },
           "configurations": {
             "production": {
+              "baseHref": "/portfolio/",
+              "deployUrl": "/portfolio/",
               "budgets": [
                 {
                   "type": "initial",
