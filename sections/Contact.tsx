@@ -118,7 +118,11 @@ export default function Contact() {
             También podés descargar mi CV para conocer más sobre mi experiencia
           </p>
           <Button asChild size="lg" className="rounded-full">
-            <a href="#" style={{ padding: "0.75rem 2rem", fontSize: "1rem" }}>
+            <a 
+              href="/cv/CV FABRIZIO LEONEL LUDUENA.pdf" 
+              download="CV_Fabrizio_Luduena.pdf"
+              style={{ padding: "0.75rem 2rem", fontSize: "1rem" }}
+            >
               Descargar CV
             </a>
           </Button>
