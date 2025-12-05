@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import type { Project } from "@/types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,33 +12,13 @@ import { ExternalLink, Github } from "lucide-react";
 const projects: Project[] = [
   {
     id: "1",
-    title: "Sistema de Gestión Empresarial",
+    title: "Sistema de Gestión para Laboratorio de Análisis Clínicos",
     description:
-      "API REST completa con autenticación, gestión de usuarios, reportes y módulos escalables para diferentes áreas de negocio.",
-    image: "/placeholder-project.jpg",
-    tags: ["Java", "Spring Boot", "PostgreSQL", "JWT"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: "2",
-    title: "Dashboard Administrativo",
-    description:
-      "Panel de control con Angular para visualización de datos, gestión de inventario y métricas en tiempo real.",
-    image: "/placeholder-project.jpg",
-    tags: ["Angular", "TypeScript", "RxJS", "Material UI"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: "3",
-    title: "Microservicios E-commerce",
-    description:
-      "Arquitectura de microservicios con Spring Boot, manejo de transacciones distribuidas y contenedorización con Docker.",
-    image: "/placeholder-project.jpg",
-    tags: ["Spring Boot", "Docker", "MySQL", "Microservicios"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Sistema integral para la gestión de un laboratorio clínico desarrollado con Angular 17+ siguiendo las mejores prácticas de desarrollo frontend.",
+    image: "/images/Laboratorio.png",
+    tags: ["Angular", "TypeScript", "NgInx", "PrimeNG", "Java", "Spring Boot", "Docker", "MySQL", "Microservicios"],
+    demoUrl: "https://laboratoriofront.netlify.app/login",
+    githubUrl: "https://github.com/FabrizioLeonelLuduena/Laboratorio-APP",
   },
 ];
 
@@ -69,7 +50,17 @@ export default function Projects() {
               style={{ minWidth: "350px", maxWidth: "350px", flexShrink: 0 }}
             >
               <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary" style={{ height: "100%" }}>
-                <div className="bg-gradient-to-br from-blue-500 to-purple-600" style={{ height: "150px" }} />
+                <div style={{ height: "200px", overflow: "hidden", position: "relative" }}>
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    style={{ 
+                      objectFit: "cover",
+                      objectPosition: "center"
+                    }}
+                  />
+                </div>
                 <CardHeader style={{ padding: "1.75rem 1.75rem 1rem 1.75rem" }}>
                   <CardTitle style={{ fontSize: "1.25rem", lineHeight: "1.4", marginBottom: "0.5rem" }}>{project.title}</CardTitle>
                   <CardDescription style={{ lineHeight: "1.6" }}>{project.description}</CardDescription>
@@ -85,13 +76,23 @@ export default function Projects() {
 
                   <div className="flex" style={{ gap: "0.5rem" }}>
                     <Button asChild variant="default" size="sm">
-                      <a href={project.demoUrl} style={{ padding: "0.5rem 1rem", gap: "0.5rem" }}>
+                      <a 
+                        href={project.demoUrl} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ padding: "0.5rem 1rem", gap: "0.5rem" }}
+                      >
                         <ExternalLink style={{ width: "1rem", height: "1rem" }} />
                         Demo
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="sm">
-                      <a href={project.githubUrl} style={{ padding: "0.5rem 1rem", gap: "0.5rem" }}>
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ padding: "0.5rem 1rem", gap: "0.5rem" }}
+                      >
                         <Github style={{ width: "1rem", height: "1rem" }} />
                         GitHub
                       </a>

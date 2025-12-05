@@ -16,7 +16,8 @@ import {
   SiJavascript,
   SiNextdotjs,
   SiMongodb,
-  SiSharp
+  SiSharp,
+  SiNginx
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { Code2, Webhook, Server, GitBranch, Eye, Settings, Lightbulb, Layers } from "lucide-react";
@@ -42,6 +43,7 @@ const techCategories = [
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 90 },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 60 },
       { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 40 },
+      { name: "Nginx", icon: SiNginx, color: "#009639", level: 70 },
     ]
   },
   {
