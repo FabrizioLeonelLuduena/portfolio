@@ -56,7 +56,7 @@ export default function Hero() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/cv/CV FABRIZIO LEONEL LUDUENA.pdf"
+                  href="/cv/CVFABRIZIOLEONELLUDUENA.pdf"
                   download="CV_Fabrizio_Luduena.pdf"
                   style={{ padding: "0.75rem 2rem", fontSize: "1rem", gap: "0.5rem" }}
                 >
