@@ -41,12 +41,12 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900" style={{ marginBottom: "1.5rem" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3F1521]" style={{ marginBottom: "1.5rem" }}>
               Acerca de Mí
             </h2>
 
             <div>
-              <h3 className="text-2xl font-bold text-slate-900" style={{ marginBottom: "0.75rem" }}>
+              <h3 className="text-2xl font-bold text-[#3F1521]" style={{ marginBottom: "0.75rem" }}>
                 Fabrizio Ludueña
               </h3>
               <p className="text-slate-600" style={{ lineHeight: "1.8", marginBottom: "1rem" }}>
@@ -62,7 +62,7 @@ export default function About() {
 
             {/* Mi enfoque de trabajo */}
             <div>
-              <h4 className="text-lg font-semibold text-slate-900 flex items-center" style={{ marginBottom: "0.75rem", gap: "0.5rem" }}>
+              <h4 className="text-lg font-semibold text-[#3F1521] flex items-center" style={{ marginBottom: "0.75rem", gap: "0.5rem" }}>
                 <span className="text-xl">|</span> Mi enfoque de trabajo
               </h4>
               <p className="text-slate-600 text-sm" style={{ lineHeight: "1.7", marginBottom: "0.75rem" }}>
@@ -73,11 +73,11 @@ export default function About() {
 
             {/* Educación */}
             <div>
-              <h4 className="text-lg font-semibold text-slate-900 flex items-center" style={{ marginBottom: "0.5rem", gap: "0.5rem" }}>
+              <h4 className="text-lg font-semibold text-[#3F1521] flex items-center" style={{ marginBottom: "0.5rem", gap: "0.5rem" }}>
                 <span className="text-xl">|</span> Educación
               </h4>
               <div style={{ marginBottom: "0.5rem" }}>
-                <p className="text-slate-900 font-medium">Universidad Tecnológica Nacional (UTN)</p>
+                <p className="text-[#3F1521] font-medium">Universidad Tecnológica Nacional (UTN)</p>
                 <p className="text-sm text-slate-600">Licenciatura en Sistemas</p>
                 <p className="text-xs text-slate-500">Actualmente realizando</p>
               </div>
