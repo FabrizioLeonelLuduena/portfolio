@@ -109,7 +109,7 @@ export default function About() {
                     Universidad Tecnológica Nacional (UTN)
                   </p>
                   <p className="text-sm" style={{ color: 'var(--text-secondary)', marginTop: '2px' }}>
-                    Licenciatura en Sistemas
+                    Tecnicatura Universitaria en Programación
                   </p>
                   <span style={{ display: 'inline-block', marginTop: '6px', background: 'var(--amber)', color: 'white', fontSize: '0.72rem', fontWeight: 600, padding: '3px 10px', borderRadius: '50px' }}>
                     En curso
