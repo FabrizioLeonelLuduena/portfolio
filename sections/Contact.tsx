@@ -33,7 +33,7 @@ const contactInfo = [
     label: "GitHub",
     value: "FabrizioLeonelLuduena",
     href: "https://github.com/FabrizioLeonelLuduena",
-    color: "#3F1521"
+    color: "#181717"
   }
 ];
 
@@ -42,7 +42,7 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center py-20 px-6 bg-[#B4C5F3]" ref={ref}>
+    <section id="contact" className="min-h-screen flex items-center justify-center py-20 px-6 bg-slate-50" ref={ref}>
       <div className="container mx-auto max-w-4xl" style={{ width: "100%" }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +51,7 @@ export default function Contact() {
           className="text-center"
           style={{ marginBottom: "3rem" }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3F1521]" style={{ marginBottom: "1rem" }}>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900" style={{ marginBottom: "1rem" }}>
             Contacto
           </h2>
         </motion.div>
@@ -81,7 +81,7 @@ export default function Contact() {
                         <Icon style={{ width: "1.5rem", height: "1.5rem", color: contact.color }} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-[#3F1521]" style={{ marginBottom: "0.25rem" }}>
+                        <h3 className="font-semibold text-slate-900" style={{ marginBottom: "0.25rem" }}>
                           {contact.label}
                         </h3>
                         <p className="text-slate-600 text-sm break-all" style={{ marginBottom: "0.75rem", lineHeight: "1.5" }}>

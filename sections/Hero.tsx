@@ -26,7 +26,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#3F1521]" style={{ lineHeight: "1.2", marginBottom: "1.5rem" }}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900" style={{ lineHeight: "1.2", marginBottom: "1.5rem" }}>
               Hola, soy Fabrizio
             </h1>
             

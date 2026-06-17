@@ -24,9 +24,9 @@ const projects: Project[] = [
     id: "2",
     title: "TallerSoft — Sistema de Gestión para Talleres de Servicio Técnico",
     description:
-      "Plataforma ERP web orientada a PYMEs del rubro técnico (electrónica, computadoras, celulares, electrodomésticos) que digitaliza los procesos operativos del taller: órdenes de trabajo con tablero Kanban en tiempo real, gestión de clientes y equipos, stock de repuestos con alertas, caja y facturación con integración a MercadoPago, y un asistente conversacional con IA que responde preguntas sobre el estado del negocio usando datos en tiempo real.",
+      "Plataforma ERP web para PYMEs del rubro técnico que digitaliza la operativa del taller: órdenes de trabajo con tablero Kanban en tiempo real, gestión de clientes y equipos, stock con alertas, facturación y un asistente de IA con acceso a datos del negocio.",
     image: "/images/TallerSoft.png",
-    tags: ["Angular", "TypeScript", "Angular Material", "Java", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "JWT", "Python", "FastAPI", "Pandas", "PostgreSQL", "Docker", "Groq API", "MercadoPago", "WebSocket", "STOMP", "iText", "Microservicios"],
+    tags: ["Angular", "TypeScript", "Angular Material", "Java", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "Python", "FastAPI", "Pandas", "PostgreSQL", "Docker", "WebSocket", "Microservicios"],
     demoUrl: "https://tallersoft-front.netlify.app/login",
     githubUrl: "https://github.com/FabrizioLeonelLuduena/TallerSoft",
   },
@@ -37,13 +37,13 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-[#B4C5F3]" ref={ref}>
+    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-slate-50" ref={ref}>
       <div className="container mx-auto max-w-6xl" style={{ width: "100%" }}>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-[#3F1521] text-center" style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", marginBottom: "4rem" }}
+          className="text-4xl md:text-5xl font-bold text-slate-900 text-center" style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", marginBottom: "4rem" }}
         >
           Proyectos Destacados
         </motion.h2>

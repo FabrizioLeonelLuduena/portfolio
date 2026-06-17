@@ -42,7 +42,7 @@ const techCategories = [
       { name: "React", icon: SiReact, color: "#61DAFB", level: 40 },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 90 },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 60 },
-      { name: "Next.js", icon: SiNextdotjs, color: "#3F1521", level: 40 },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 40 },
       { name: "Nginx", icon: SiNginx, color: "#009639", level: 70 },
     ]
   },
@@ -59,7 +59,7 @@ const techCategories = [
     techs: [
       { name: "Docker", icon: SiDocker, color: "#2496ED", level: 80 },
       { name: "Git", icon: SiGit, color: "#F05032", level: 90 },
-      { name: "GitHub", icon: SiGithub, color: "#3F1521", level: 90 },
+      { name: "GitHub", icon: SiGithub, color: "#181717", level: 90 },
       { name: "CI/CD", icon: GitBranch, color: "#2088FF", level: 60 },
       { name: "Observabilidad", icon: Eye, color: "#FF6B35", level: 60 },
       { name: "Orquestación", icon: Settings, color: "#326CE5", level: 60 },
@@ -86,7 +86,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-[#3F1521] text-center"
+          className="text-4xl md:text-5xl font-bold text-slate-900 text-center"
           style={{ marginBottom: "3rem" }}
         >
           Tecnologías
@@ -104,7 +104,7 @@ export default function Skills() {
             >
               <Card className="transition-all duration-300 hover:shadow-xl hover:border-primary" style={{ height: "100%", display: "flex", flexDirection: "column" }}>
                 <CardContent style={{ padding: "2rem 1.75rem", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <h3 className="text-xl font-bold text-[#3F1521] text-center" style={{ marginBottom: "1.75rem" }}>
+                  <h3 className="text-xl font-bold text-slate-900 text-center" style={{ marginBottom: "1.75rem" }}>
                     {category.title}
                   </h3>
                   <div className="flex flex-col" style={{ gap: "1.25rem", flex: 1 }}>
