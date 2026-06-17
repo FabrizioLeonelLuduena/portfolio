@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download } from "lucide-react";
 
-const ANIMATION_CONFIG = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  transition: { duration: 0.8 },
-} as const;
-
 export default function Hero() {
   return (
     <section
@@ -26,19 +20,41 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900" style={{ lineHeight: "1.2", marginBottom: "1.5rem" }}>
-              Hola, soy Fabrizio
+            <p style={{ color: 'var(--teal)', letterSpacing: '0.1em', textTransform: 'uppercase', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.5rem' }}>
+              Full Stack Developer · Java · Angular
+            </p>
+
+            <h1
+              className="text-5xl md:text-6xl lg:text-7xl font-bold"
+              style={{ lineHeight: "1.2", marginBottom: "1.5rem", color: 'var(--text-primary)' }}
+            >
+              Hola, soy{" "}
+              <span style={{
+                background: 'linear-gradient(135deg, #D1801E 0%, #AA8552 50%, #374F4E 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}>Fabrizio</span>
             </h1>
-            
+
             <div className="inline-block" style={{ marginBottom: "1.5rem" }}>
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-700 border-l-4 border-blue-600" style={{ paddingLeft: "1rem" }}>
+              <h2
+                className="text-2xl md:text-3xl font-semibold border-l-4 border-[#D1801E]"
+                style={{ paddingLeft: "1rem", color: 'var(--text-primary)' }}
+              >
                 Desarrollador Full Stack
               </h2>
             </div>
 
-            <p className="text-lg text-slate-600 max-w-xl" style={{ lineHeight: "1.8", marginBottom: "2rem" }}>
-              Desarrollador Full Stack apasionado por crear soluciones <strong>claras, escalables y bien pensadas</strong>. 
-              Disfruto trabajar con Java, Spring Boot y Angular, y me motiva entender a fondo cada proyecto para construir software que realmente aporte valor. <strong>Curioso, colaborativo y siempre en aprendizaje.</strong>
+            <p
+              className="text-lg max-w-xl"
+              style={{ lineHeight: "1.8", marginBottom: "2rem", color: 'var(--text-secondary)' }}
+            >
+              Desarrollador Full Stack apasionado por crear soluciones{" "}
+              <strong style={{ color: 'var(--text-primary)' }}>claras, escalables y bien pensadas</strong>.
+              Disfruto trabajar con Java, Spring Boot y Angular, y me motiva entender a fondo cada proyecto
+              para construir software que realmente aporte valor.{" "}
+              <strong style={{ color: 'var(--text-primary)' }}>Curioso, colaborativo y siempre en aprendizaje.</strong>
             </p>
 
             <div className="flex" style={{ gap: "1rem" }}>
@@ -74,16 +90,19 @@ export default function Hero() {
             className="relative"
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 rounded-3xl shadow-2xl overflow-hidden">
-                <img 
-                  src="/images/Foto Mia.jpeg" 
-                  alt="Fabrizio Ludueña" 
+              <div
+                className="absolute inset-0 rounded-3xl overflow-hidden"
+                style={{ boxShadow: 'var(--shadow-lg), 0 0 0 1px rgba(55,79,78,0.12)' }}
+              >
+                <img
+                  src="/images/Foto Mia.jpeg"
+                  alt="Fabrizio Ludueña"
                   className="w-full h-full object-cover"
                 />
               </div>
               {/* Decoración */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-500 rounded-full opacity-20 blur-2xl"></div>
-              <div className="absolute -top-6 -left-6 w-32 h-32 bg-purple-500 rounded-full opacity-20 blur-2xl"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full opacity-20 blur-2xl" style={{ background: '#D1801E' }}></div>
+              <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full opacity-20 blur-2xl" style={{ background: '#AA8552' }}></div>
             </div>
           </motion.div>
         </div>

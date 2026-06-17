@@ -80,14 +80,14 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center py-20 px-6" ref={ref}>
+    <section id="skills" className="min-h-screen flex items-center justify-center py-20 px-6" style={{ background: 'var(--bg-subtle-2)' }} ref={ref}>
       <div className="container mx-auto max-w-6xl" style={{ width: "100%" }}>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-slate-900 text-center"
-          style={{ marginBottom: "3rem" }}
+          className="text-4xl md:text-5xl font-bold text-center"
+          style={{ marginBottom: "3rem", color: 'var(--text-primary)' }}
         >
           Tecnologías
         </motion.h2>
@@ -104,7 +104,7 @@ export default function Skills() {
             >
               <Card className="transition-all duration-300 hover:shadow-xl hover:border-primary" style={{ height: "100%", display: "flex", flexDirection: "column" }}>
                 <CardContent style={{ padding: "2rem 1.75rem", flex: 1, display: "flex", flexDirection: "column" }}>
-                  <h3 className="text-xl font-bold text-slate-900 text-center" style={{ marginBottom: "1.75rem" }}>
+                  <h3 className="text-xl font-bold text-center" style={{ marginBottom: "1.75rem", color: 'var(--text-primary)' }}>
                     {category.title}
                   </h3>
                   <div className="flex flex-col" style={{ gap: "1.25rem", flex: 1 }}>
@@ -127,7 +127,7 @@ export default function Skills() {
                               animate={isInView ? { width: `${tech.level}%` } : {}}
                               transition={{ duration: 1, delay: categoryIndex * 0.15 + techIndex * 0.08 + 0.3 }}
                               className="h-full rounded-full"
-                              style={{ backgroundColor: tech.color }}
+                              style={{ background: 'linear-gradient(90deg, #374F4E 0%, #AA8552 100%)' }}
                             />
                           </div>
                         </motion.div>

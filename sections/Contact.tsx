@@ -12,29 +12,33 @@ const contactInfo = [
     label: "LinkedIn",
     value: "Fabrizio Leonel Ludueña",
     href: "https://www.linkedin.com/in/fabrizioluduena-dev",
-    color: "#0A66C2"
+    color: "#0A66C2",
+    bgColor: "var(--teal-soft)",
   },
   {
     icon: Mail,
     label: "Gmail",
     value: "luduenafabrizio26@gmail.com",
     href: "mailto:luduenafabrizio26@gmail.com",
-    color: "#EA4335"
+    color: "#EA4335",
+    bgColor: "var(--amber-soft)",
   },
   {
     icon: Phone,
     label: "WhatsApp",
     value: "+54 351 733 5811",
     href: "https://wa.me/5493517335811",
-    color: "#25D366"
+    color: "#25D366",
+    bgColor: "#eef3f0",
   },
   {
     icon: Github,
     label: "GitHub",
     value: "FabrizioLeonelLuduena",
     href: "https://github.com/FabrizioLeonelLuduena",
-    color: "#181717"
-  }
+    color: "#181717",
+    bgColor: "var(--bg-subtle)",
+  },
 ];
 
 export default function Contact() {
@@ -42,7 +46,12 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="min-h-screen flex items-center justify-center py-20 px-6 bg-slate-50" ref={ref}>
+    <section
+      id="contact"
+      className="min-h-screen flex items-center justify-center py-20 px-6"
+      style={{ background: 'var(--bg-subtle)' }}
+      ref={ref}
+    >
       <div className="container mx-auto max-w-4xl" style={{ width: "100%" }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +60,10 @@ export default function Contact() {
           className="text-center"
           style={{ marginBottom: "3rem" }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900" style={{ marginBottom: "1rem" }}>
+          <h2
+            className="text-4xl md:text-5xl font-bold"
+            style={{ marginBottom: "1rem", color: 'var(--text-primary)' }}
+          >
             Contacto
           </h2>
         </motion.div>
@@ -65,30 +77,35 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ y: -2 }}
               >
-                <Card className="h-full transition-all duration-300 hover:shadow-xl hover:border-primary">
+                <Card
+                  className="h-full transition-all duration-300 hover:border-primary"
+                  style={{ boxShadow: 'var(--shadow-sm)' }}
+                  onMouseEnter={e => (e.currentTarget.style.boxShadow = 'var(--shadow-md)')}
+                  onMouseLeave={e => (e.currentTarget.style.boxShadow = 'var(--shadow-sm)')}
+                >
                   <CardContent style={{ padding: "2rem" }}>
                     <div className="flex items-start" style={{ gap: "1rem" }}>
-                      <div 
+                      <div
                         className="rounded-full flex items-center justify-center flex-shrink-0"
-                        style={{ 
-                          width: "3rem", 
+                        style={{
+                          width: "3rem",
                           height: "3rem",
-                          backgroundColor: `${contact.color}15`
+                          backgroundColor: contact.bgColor,
                         }}
                       >
                         <Icon style={{ width: "1.5rem", height: "1.5rem", color: contact.color }} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-slate-900" style={{ marginBottom: "0.25rem" }}>
+                        <h3 className="font-semibold" style={{ marginBottom: "0.25rem", color: 'var(--text-primary)' }}>
                           {contact.label}
                         </h3>
-                        <p className="text-slate-600 text-sm break-all" style={{ marginBottom: "0.75rem", lineHeight: "1.5" }}>
+                        <p className="text-sm break-all" style={{ marginBottom: "0.75rem", lineHeight: "1.5", color: 'var(--text-secondary)' }}>
                           {contact.value}
                         </p>
                         <Button asChild variant="outline" size="sm">
-                          <a 
+                          <a
                             href={contact.href}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -114,12 +131,12 @@ export default function Contact() {
           className="text-center"
           style={{ marginTop: "3rem" }}
         >
-          <p className="text-slate-600" style={{ marginBottom: "1rem" }}>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: "1rem" }}>
             También podés descargar mi CV para conocer más sobre mi experiencia
           </p>
           <Button asChild size="lg" className="rounded-full">
-            <a 
-              href="/cv/CVFABRIZIOLEONELLUDUENA.pdf" 
+            <a
+              href="/cv/CVFABRIZIOLEONELLUDUENA.pdf"
               download="CV_Fabrizio_Luduena.pdf"
               style={{ padding: "0.75rem 2rem", fontSize: "1rem" }}
             >

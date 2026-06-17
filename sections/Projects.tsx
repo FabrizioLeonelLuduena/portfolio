@@ -37,48 +37,65 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center py-20 bg-slate-50" ref={ref}>
+    <section id="projects" className="min-h-screen flex items-center justify-center py-20" ref={ref}>
       <div className="container mx-auto max-w-6xl" style={{ width: "100%" }}>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-slate-900 text-center" style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", marginBottom: "4rem" }}
+          className="text-4xl md:text-5xl font-bold text-center"
+          style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", marginBottom: "4rem", color: 'var(--text-primary)' }}
         >
           Proyectos Destacados
         </motion.h2>
 
-        <div className="overflow-x-auto scrollbar-hide" style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", paddingTop: "1rem", paddingBottom: "2rem" }}>
-          <div className="flex" style={{ gap: "2rem" }}>
+        <div style={{ paddingLeft: "1.5rem", paddingRight: "1.5rem", paddingBottom: "2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.75rem" }}>
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ scale: 1.05 }}
-              style={{ minWidth: "350px", maxWidth: "350px", flexShrink: 0 }}
+              whileHover={{ y: -4 }}
             >
-              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary" style={{ height: "100%" }}>
+              <Card
+                className="h-full overflow-hidden transition-all duration-300 hover:border-primary"
+                style={{ height: "100%", boxShadow: 'var(--shadow-sm)' }}
+                onMouseEnter={e => (e.currentTarget.style.boxShadow = 'var(--shadow-lg)')}
+                onMouseLeave={e => (e.currentTarget.style.boxShadow = 'var(--shadow-sm)')}
+              >
                 <div style={{ height: "200px", overflow: "hidden", position: "relative" }}>
-                  <Image 
-                    src={project.image} 
+                  <Image
+                    src={project.image}
                     alt={project.title}
                     fill
-                    style={{ 
-                      objectFit: "cover",
-                      objectPosition: "center"
-                    }}
+                    style={{ objectFit: "cover", objectPosition: "center" }}
                   />
                 </div>
                 <CardHeader style={{ padding: "1.75rem 1.75rem 1rem 1.75rem" }}>
-                  <CardTitle style={{ fontSize: "1.25rem", lineHeight: "1.4", marginBottom: "0.5rem" }}>{project.title}</CardTitle>
-                  <CardDescription style={{ lineHeight: "1.6" }}>{project.description}</CardDescription>
+                  <CardTitle style={{ fontSize: "1.05rem", lineHeight: "1.4", marginBottom: "0.5rem", color: 'var(--text-primary)' }}>
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription style={{ lineHeight: "1.6", color: 'var(--text-secondary)' }}>
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent style={{ padding: "0 1.75rem 1.75rem 1.75rem" }}>
                   <div className="flex flex-wrap" style={{ gap: "0.5rem", marginBottom: "1rem" }}>
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" style={{ padding: "0.25rem 0.75rem" }}>
+                      <Badge
+                        key={tag}
+                        variant="secondary"
+                        style={{
+                          padding: "0.25rem 0.75rem",
+                          background: 'var(--amber-soft)',
+                          color: '#a0620f',
+                          border: '1px solid rgba(209,128,30,0.2)',
+                          borderRadius: '50px',
+                          fontSize: '0.72rem',
+                          fontWeight: 600,
+                        }}
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -86,8 +103,8 @@ export default function Projects() {
 
                   <div className="flex" style={{ gap: "0.5rem" }}>
                     <Button asChild variant="default" size="sm">
-                      <a 
-                        href={project.demoUrl} 
+                      <a
+                        href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         style={{ padding: "0.5rem 1rem", gap: "0.5rem" }}
@@ -97,7 +114,7 @@ export default function Projects() {
                       </a>
                     </Button>
                     <Button asChild variant="outline" size="sm">
-                      <a 
+                      <a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -112,7 +129,6 @@ export default function Projects() {
               </Card>
             </motion.div>
           ))}
-          </div>
         </div>
       </div>
     </section>

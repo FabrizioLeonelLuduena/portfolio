@@ -51,7 +51,7 @@ export default function Header() {
       animate={{ y: 0 }}
       className="fixed top-4 left-1/2 -translate-x-1/2 z-50"
     >
-      <nav className="bg-white/90 backdrop-blur-md rounded-full shadow-lg border border-slate-200" style={{ padding: "0.25rem" }}>
+      <nav className="backdrop-blur-md rounded-full border border-[#e0d4c8]" style={{ padding: "0.25rem", background: "rgba(237,229,220,0.92)", boxShadow: "var(--shadow-sm)" }}>
         <ul className="flex items-center" style={{ gap: "0.25rem" }}>
           {navItems.map((item) => {
             const isActive = activeSection === item.href.substring(1);
@@ -65,7 +65,7 @@ export default function Header() {
                   {isActive && (
                     <motion.span
                       layoutId="active-pill"
-                      className="absolute inset-0 bg-slate-900 rounded-full"
+                      className="absolute inset-0 bg-[#374F4E] rounded-full"
                       transition={{ type: "spring", duration: 0.6 }}
                     />
                   )}
@@ -73,7 +73,7 @@ export default function Header() {
                     className={`relative z-10 flex items-center rounded-full font-medium transition-colors ${
                       isActive
                         ? "text-white"
-                        : "text-slate-700 hover:text-slate-900"
+                        : "text-[#5a5a50] hover:text-[#374F4E]"
                     }`}
                     style={{ 
                       padding: "0.5rem 1.25rem",
