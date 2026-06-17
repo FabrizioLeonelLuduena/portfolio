@@ -39,10 +39,10 @@ const techCategories = [
     title: "Frontend",
     techs: [
       { name: "Angular", icon: SiAngular, color: "#DD0031", level: 90 },
-      { name: "React", icon: SiReact, color: "#61DAFB", level: 40 },
+      { name: "React", icon: SiReact, color: "#61DAFB", level: 10 },
       { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 90 },
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 60 },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 40 },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 10 },
       { name: "Nginx", icon: SiNginx, color: "#009639", level: 70 },
     ]
   },
@@ -50,8 +50,8 @@ const techCategories = [
     title: "Base de Datos",
     techs: [
       { name: "MySQL", icon: SiMysql, color: "#4479A1", level: 90 },
-      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", level: 70 },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 40 },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", level: 90 },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 30 },
     ]
   },
   {

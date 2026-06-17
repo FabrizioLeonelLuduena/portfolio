@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "Plataforma ERP web para PYMEs del rubro técnico que digitaliza la operativa del taller: órdenes de trabajo con tablero Kanban en tiempo real, gestión de clientes y equipos, stock con alertas, facturación y un asistente de IA con acceso a datos del negocio.",
     image: "/images/TallerSoft.png",
-    tags: ["Angular", "TypeScript", "Angular Material", "Java", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "Python", "FastAPI", "Pandas", "PostgreSQL", "Docker", "WebSocket", "Microservicios"],
+    tags: ["Angular", "TypeScript", "Angular Material", "Java", "Spring Boot", "Spring Cloud Gateway", "Spring Security", "Python", "FastAPI", "PostgreSQL", "Docker",  "Microservicios"],
     demoUrl: "https://tallersoft-front.netlify.app/login",
     githubUrl: "https://github.com/FabrizioLeonelLuduena/TallerSoft",
   },
