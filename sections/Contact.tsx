@@ -136,8 +136,8 @@ export default function Contact() {
           </p>
           <Button asChild size="lg" className="rounded-full">
             <a
-              href="/cv/CVFABRIZIOLEONELLUDUENA.pdf"
-              download="CV_Fabrizio_Luduena.pdf"
+              href="/cv/CV_Fabrizio_Ludueña.pdf"
+              download="CV_Fabrizio_Ludueña.pdf"
               style={{ padding: "0.75rem 2rem", fontSize: "1rem" }}
             >
               Descargar CV

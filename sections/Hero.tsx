@@ -72,8 +72,8 @@ export default function Hero() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="/cv/CVFABRIZIOLEONELLUDUENA.pdf"
-                  download="CV_Fabrizio_Luduena.pdf"
+                  href="/cv/CV_Fabrizio_Ludueña.pdf"
+                  download="CV_Fabrizio_Ludueña.pdf"
                   style={{ padding: "0.75rem 2rem", fontSize: "1rem", gap: "0.5rem" }}
                 >
                   <Download style={{ width: "1.25rem", height: "1.25rem" }} /> Descargar CV
