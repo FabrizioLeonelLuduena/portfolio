@@ -14,7 +14,7 @@ const projects: Project[] = [
     id: "1",
     title: "Sistema de Gestión para Laboratorio de Análisis Clínicos",
     description:
-      "Sistema integral para la gestión de un laboratorio clínico desarrollado con Angular 17+ siguiendo las mejores prácticas de desarrollo frontend.",
+      "Sistema integral de gestión para laboratorios clínicos desarrollado con arquitectura de microservicios. Participé en el desarrollo completo del frontend en Angular, con foco principal en el módulo de Abastecimiento e Inventario: gestión de órdenes de compra, recepciones de mercadería, movimientos de stock, proveedores e insumos, y un dashboard de KPIs con alertas de stock crítico y excedente.",
     image: "/images/Laboratorio.png",
     tags: ["Angular", "TypeScript", "NgInx", "PrimeNG", "Java", "Spring Boot", "Docker", "MySQL", "Microservicios"],
     demoUrl: "https://laboratoriofront.netlify.app/login",
